@@ -1,6 +1,30 @@
 <mvc:View controllerName="ecommerceproject.controller.Home"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    </Page>
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core">
+ <f:DynamicPage
+        id="homePage"
+        showFooter="false"
+    >
+        <!-- Header -->
+        <f:title>
+            <f:DynamicPageTitle id="DynamicPage1" backgroundDesign="Transparent">
+                <f:heading>
+                    <Title id="DynamicTitle"
+                        text="{i18n>product}"
+                        level="H1"
+                    />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+
+        <!-- Content -->
+        <f:content>
+            <core:Fragment
+               fragmentName="ecommerceproject.fragment.Card"
+                type="XML"
+            />
+        </f:content>
+    </f:DynamicPage>
 </mvc:View>

@@ -1,1 +1,84 @@
-/* Enter your custom styles here */
+/* --- Contenedor de la carta --- */
+.sapFCard.cardStyle {
+    border: none !important;
+    border-radius: 0px !important;
+    box-shadow: none !important; /* Quitamos la sombra para hacerla plana */
+    background-color: transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover: solo aparece la sombra al pasar el ratón */
+.sapFCard.cardStyle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+    background-color: #fff;
+}
+
+/* --- Etiqueta 'Nuevo' --- */
+.badgeNuevo {
+    background-color: #e8f5e9;
+    color: #27ae60;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    position: absolute; /* La pone encima de la imagen */
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* --- Imagen --- */
+.productImgStyle {
+    object-fit: contain;
+    background-color: #f8f9fa; /* Fondo gris muy clarito como en ISDIN */
+    padding: 15px;
+}
+
+/* --- Textos --- */
+.productTitleStyle {
+    font-weight: 400 !important; /* Letra más fina y elegante */
+    color: #333 !important;
+}
+
+.productDescriptionStyle {
+    color: #555 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.2rem;
+}
+
+.ratingText {
+    font-size: 0.8rem !important;
+    color: #666 !important;
+}
+
+.productPrice {
+    font-weight: bold !important;
+    font-size: 2rem !important;
+    color: #13099c !important;
+}
+
+.pointsLink {
+    font-size: 0.8rem;
+    color: #666 !important;
+    text-decoration: underline;
+}
+
+/* --- Botón Oscuro --- */
+.btnAddStyle {
+    width: 100% !important;
+}
+
+/* ATENCIÓN: En SAPUI5 hay que apuntar a inner para forzar el fondo */
+.btnAddStyle .sapMBtnInner {
+    background-color: #acacac !important; /* Gris muy oscuro */
+    color: rgb(255, 255, 255) !important;
+    border: none !important;
+    border-radius: 2px !important; /* Bordes casi cuadrados */
+    text-shadow: none !important;
+    background-image: none !important;
+    height: 1.5rem !important; /* Un poco más alto */
+}
+
+.btnAddStyle .sapMBtnInner:hover {
+    background-color: #222222 !important; /* Más negro al pasar el ratón */
+}
