@@ -68,7 +68,7 @@
                         </HBox>
                         <HBox id="Box5" width="100%" justifyContent="Center" class="sapUiMediumMarginTop sapUiSmallMarginBottom">
                             <Button id="addToCartBtn"
-                                text="Añadir al carrito"
+                                text="{i18n>add}"
                                 type="Emphasized"
                                 class="btnAddStyle"
                             />
