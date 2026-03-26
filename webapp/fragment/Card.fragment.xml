@@ -1,0 +1,82 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+>
+    <f:GridContainer id="Container1"
+        containerQuery="true"
+        width="100%"
+        class="sapUiContentPadding sapUiSmallMarginTop"
+        items="{
+                path: 'configModel>/Home/cards' 
+        }" 
+    > 
+        <f:items>
+            <f:Card id="card1"
+                class="cardStyle"
+                press=".onCardPress"
+                visible="{configModel>visible}"
+            >
+                <!-- Layout del grid -->
+                <f:layoutData>
+                    <f:GridContainerItemLayoutData id="containerLayout"
+                        columns="3"
+                        rows="9"
+                    />
+                </f:layoutData>
+
+                <!-- Contenido de la card -->
+                <f:content>
+                    <VBox id="Box1">
+                        <VBox id="Box2" class="sapUiSmallMargin" alignItems="Center">
+                            <Image id="productImage"
+                                src="{configModel>imageSrc}"
+                                width="100%"
+                                height="200px"
+                                
+                                class="sapUiSmallMarginBottom productImgStyle"
+                            />
+
+                            <Title id="title"
+                                text="{
+                                parts: [{ path: 'configModel>title' }]
+                            }"
+                                titleStyle="H5"
+                                width="100%"
+                                textAlign="Center"
+                                class="sapUiSmallMarginTop productTitleStyle"
+                            /> 
+                        </VBox>
+
+                        <Text id="text1"
+                            text="{
+                            parts: [{ path: 'configModel>description' }]
+                        }"
+                            textAlign="Center"
+                            maxLines="2"
+                            width="100%"
+                            class="sapUiSmallMarginTop productDescriptionStyle"
+                        />
+                        <HBox id="Box3" alignItems="Center" justifyContent="Center" class="sapUiTinyMarginTop">
+                            <RatingIndicator id="indicator" value="4.5" maxValue="5" editable="false" class="customRating" />
+                            <Text id="rating" text="4.6" class="sapUiTinyMarginBegin ratingText" />
+                        </HBox>
+                        <HBox id="Box4" width="100%" justifyContent="Center" class="sapUiMediumMarginTop sapUiSmallMarginBottom">
+                        <Text id="textPrice" text="{configModel>price} €" 
+                            textAlign="Center"
+                            class="sapUiMediumMarginTop productPrice" />
+                        </HBox>
+                        <HBox id="Box5" width="100%" justifyContent="Center" class="sapUiMediumMarginTop sapUiSmallMarginBottom">
+                            <Button id="addToCartBtn"
+                                text="Añadir al carrito"
+                                type="Emphasized"
+                                class="btnAddStyle"
+                            />
+                        </HBox>
+                        
+                    </VBox>
+                </f:content>
+            </f:Card>
+        </f:items>
+    </f:GridContainer>
+</core:FragmentDefinition>

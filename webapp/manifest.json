@@ -18,6 +18,7 @@
   },
   "sap.ui": {
     "technology": "UI5",
+    "fullWidth": true,
     "icons": {
       "icon": "",
       "favIcon": "",
@@ -51,6 +52,10 @@
         "settings": {
           "bundleName": "ecommerceproject.i18n.i18n"
         }
+      },
+      "configModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/config.json"
       }
     },
     "resources": {

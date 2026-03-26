@@ -1,0 +1,42 @@
+{
+    "Home": {
+        "cards": [
+            {
+                "id": "card_macbook",
+                "title": "MacBook Pro M3",
+                "description": "Portátil potente para profesionales del diseño",
+                "imageSrc": "https://www.discoazul.com/uploads/media/images/portatil-apple-macbook-pro-16-silver-i9-16gb-1tb-ssd-16-1.jpg",
+                "price": 1220,
+                "visible": true,
+                "targetRoute": "RouteProductos"
+            },
+            {
+                "id": "card_watch",
+                "title": "Apple Watch Series 9",
+                "description": "Tu compañero ideal para el deporte y el control de tu salud",
+                "imageSrc": "https://www.apple.com/newsroom/images/product/watch/standard/Apple_watch-experience-for-entire-family-hero_09152020_big.jpg.large.jpg",
+                "price": 330,
+                "visible": true,
+                "targetRoute": "RouteProductos"
+            },
+            {
+                "id": "card_productos3",
+                "title": "AirPods Pro",
+                "description": "Cancelación de ruido activa y sonido espacial envolvente.",
+                "imageSrc": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MTJV3?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1694014871985",
+                "price": 220,
+                "visible": true,
+                "targetRoute": "RouteProductos"
+            },
+                        {
+                "id": "card_productos4",
+                "title": "Ipad pro 13",
+                "description": "Ten tu ordenador en un dispositivo mini, dibuja y crea con Ipad",
+                "imageSrc": "https://tse2.mm.bing.net/th/id/OIP.h69EOoxLcDri9qw-ekhIjwHaD4?rs=1&pid=ImgDetMain&o=7&rm=3",
+                "price": 500,
+                "visible": true,
+                "targetRoute": "RouteProductos"
+            }
+        ]
+    }
+}
