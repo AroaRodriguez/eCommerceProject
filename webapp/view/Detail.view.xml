@@ -1,0 +1,47 @@
+<mvc:View
+    controllerName="ecommerceproject.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout">
+
+    <Page
+        id="detailPage"
+        title="{configModel>title}"
+        showNavButton="true"
+        navButtonPress=".onNavBack"
+        backgroundDesign="Solid">
+
+        <content>
+            <layout:Grid id="_IDGenGrid" containerQuery="true" defaultSpan="XL6 L6 M6 S12" class="sapUiMediumMarginTop">
+                
+                <VBox alignItems="Center" justifyContent="Center" class="sapUiMediumMargin">
+                    <Image src="{configModel>imageSrc}" 
+                           width="100%" 
+                           class="productImgDetailStyle"/>
+                </VBox>
+
+                <VBox class="sapUiMediumMargin">
+                    
+                    <Title text="{configModel>title}" titleStyle="H1" class="sapUiSmallMarginBottom"/>
+                    
+                    <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                        <RatingIndicator value="4.6" maxValue="5" editable="false" class="customRating" />
+                        <Text text="4.6 (128 valoraciones)" class="sapUiTinyMarginBegin ratingText" />
+                    </HBox>
+
+                    <Text text="{configModel>description}" class="sapUiMediumMarginBottom productDescriptionDetailStyle"/>
+                    
+                    <Title text="{configModel>price} €" titleStyle="H2" class="sapUiSmallMarginBottom productPriceDetailStyle"/>
+                    
+                    <Text text="Impuestos incluidos. Envío gratis en pedidos superiores a 50€." class="sapUiMediumMarginBottom infoTextDetail"/>
+
+                    <Button id="addToCartBtnDetail"
+                            text="AÑADIR AL CARRITO"
+                            class="btnAddStyleDetail"
+                            width="100%"/>
+                </VBox>
+
+            </layout:Grid>
+        </content>
+    </Page>
+</mvc:View>

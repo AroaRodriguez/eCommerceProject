@@ -39,7 +39,9 @@
       "minUI5Version": "1.146.0",
       "libs": {
         "sap.m": {},
-        "sap.ui.core": {}
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.ui.layout": {}
       }
     },
     "contentDensities": {
@@ -84,12 +86,25 @@
           "target": [
             "TargetHome"
           ]
+        },
+        {
+          "name": "RouteDetail",
+          "pattern": "detail/{productIndex}",
+          "target": [
+            "TargetDetail"
+          ]
         }
       ],
       "targets": {
         "TargetHome": {
-          "id": "Home",
-          "name": "Home"
+          "viewType": "XML",
+          "viewName": "Home",
+          "id": "Home"
+        },
+        "TargetDetail": {
+          "viewType": "XML",
+          "viewName": "Detail",
+          "id": "Detail"
         }
       }
     },
