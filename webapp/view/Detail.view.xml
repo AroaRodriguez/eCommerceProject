@@ -7,38 +7,36 @@
     <Page
         id="detailPage"
         title="{configModel>title}"
-        showNavButton="true"
-        navButtonPress=".onNavBack"
         backgroundDesign="Solid">
 
         <content>
             <layout:Grid id="_IDGenGrid" containerQuery="true" defaultSpan="XL6 L6 M6 S12" class="sapUiMediumMarginTop">
                 
-                <VBox alignItems="Center" justifyContent="Center" class="sapUiMediumMargin">
-                    <Image src="{configModel>imageSrc}" 
+                <VBox id="detailBox1" alignItems="Center" justifyContent="Center" class="sapUiMediumMargin">
+                    <Image id="detailImg" src="{configModel>imageSrc}" 
                            width="100%" 
                            class="productImgDetailStyle"/>
                 </VBox>
 
-                <VBox class="sapUiMediumMargin">
+                <VBox id="detailBox2" class="sapUiMediumMargin">
                     
-                    <Title text="{configModel>title}" titleStyle="H1" class="sapUiSmallMarginBottom"/>
+                    <Title id="detailTitle1" text="{configModel>title}" titleStyle="H1" class="sapUiSmallMarginBottom"/>
                     
-                    <HBox alignItems="Center" class="sapUiSmallMarginBottom">
-                        <RatingIndicator value="4.6" maxValue="5" editable="false" class="customRating" />
-                        <Text text="4.6 (128 valoraciones)" class="sapUiTinyMarginBegin ratingText" />
+                    <HBox id="detailBox3" alignItems="Center" class="sapUiSmallMarginBottom">
+                        <RatingIndicator id="detailRating" value="4.6" maxValue="5" editable="false" class="customRating" />
+                        <Text id="detailText1" text="4.6 (128 valoraciones)" class="sapUiTinyMarginBegin ratingText" />
                     </HBox>
 
-                    <Text text="{configModel>description}" class="sapUiMediumMarginBottom productDescriptionDetailStyle"/>
+                    <Text id="detailText2" text="{configModel>description}" class="sapUiMediumMarginBottom productDescriptionDetailStyle"/>
                     
-                    <Title text="{configModel>price} €" titleStyle="H2" class="sapUiSmallMarginBottom productPriceDetailStyle"/>
+                    <Title id="detailTitle2" text="{configModel>price} €" titleStyle="H2" class="sapUiSmallMarginBottom productPriceDetailStyle"/>
                     
-                    <Text text="Impuestos incluidos. Envío gratis en pedidos superiores a 50€." class="sapUiMediumMarginBottom infoTextDetail"/>
+                    <Text id="detailText3" text="{i18n>detailText3}" class="sapUiMediumMarginBottom infoTextDetail"/>
 
                     <Button id="addToCartBtnDetail"
-                            text="AÑADIR AL CARRITO"
+                            text="{i18n>add}"
                             class="btnAddStyleDetail"
-                            width="100%"/>
+                            width="10%"/>
                 </VBox>
 
             </layout:Grid>

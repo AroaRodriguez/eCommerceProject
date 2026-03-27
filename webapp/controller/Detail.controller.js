@@ -6,7 +6,6 @@ sap.ui.define([
     return BaseController.extend("ecommerceproject.controller.Detail", {
         
         onInit: function () {
-            // ¡AQUÍ SÍ! El Detail escucha su propia ruta
             this.getRouter().getRoute("RouteDetail").attachPatternMatched(this.onObjectMatched, this);
         }, 
 
@@ -16,13 +15,16 @@ sap.ui.define([
             
             this.getView().bindElement({
                 path: sPath,
-                model: "configModel"
+                model: "configModel",
+                events: {
+                    change: function(oEvent){
+                        const oContext = oEvent.getSource().getBoundContext()
+                        if (!oContext){
+                            console.error("¡No se ha encontrado los datos para la ruta!");
+                        }
+                    }
+                }
             });
-        }, 
-
-        onNavBack: function() {
-            // Usamos la función de tu BaseController para volver a la Home
-            this.onNavBack("RouteHome"); // Llama a la función genérica de BaseController
         }
     });
 });

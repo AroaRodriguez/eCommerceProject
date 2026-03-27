@@ -12,7 +12,7 @@
         }" 
     > 
         <f:items>
-            <f:Card id="card1"
+            <f:Card 
                 class="cardStyle"
                 press=".onCardPress"
                 visible="{configModel>visible}"
@@ -29,7 +29,7 @@
                 <f:content>
                     <VBox id="Box1">
                         <VBox id="Box2" class="sapUiSmallMargin" alignItems="Center">
-                            <Image id="productImage"
+                            <Image 
                                 src="{configModel>imageSrc}"
                                 width="100%"
                                 height="200px"
@@ -37,7 +37,7 @@
                                 class="sapUiSmallMarginBottom productImgStyle"
                             />
 
-                            <Title id="title"
+                            <Title 
                                 text="{
                                 parts: [{ path: 'configModel>title' }]
                             }"
@@ -48,7 +48,7 @@
                             /> 
                         </VBox>
 
-                        <Text id="text1"
+                        <Text 
                             text="{
                             parts: [{ path: 'configModel>description' }]
                         }"
@@ -62,14 +62,15 @@
                             <Text id="rating" text="4.6" class="sapUiTinyMarginBegin ratingText" />
                         </HBox>
                         <HBox id="Box4" width="100%" justifyContent="Center" class="sapUiMediumMarginTop sapUiSmallMarginBottom">
-                        <Text id="textPrice" text="{configModel>price} €" 
+                        <Text  text="{configModel>price} €" 
                             textAlign="Center"
                             class="sapUiMediumMarginTop productPrice" />
                         </HBox>
-                        <HBox id="Box5" width="100%" justifyContent="Center" class="sapUiMediumMarginTop sapUiSmallMarginBottom">
+                        <HBox id="Box5" width="100%" justifyContent="Center"  class="sapUiMediumMarginTop sapUiSmallMarginBottom">
                             <Button id="addToCartBtn"
                                 text="{i18n>add}"
                                 type="Emphasized"
+                                press=".onAddToCardPress"
                                 class="btnAddStyle"
                             />
                         </HBox>

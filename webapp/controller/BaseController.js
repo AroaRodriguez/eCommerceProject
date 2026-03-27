@@ -17,22 +17,34 @@ sap.ui.define([
             return this.getView().getModel(sName);
         },
 
-        // --- 3. Atajo para obtener textos de traducción (i18n) ---
+        /**
+         * Obtiene el índice de la ruta de un elemento pulsado (ej. de "/Home/cards/2" saca "2")
+         * @param {sap.ui.base.Event} oEvent - El evento del clic (press)
+         * @param {string} [sModelName] - El nombre del modelo (opcional, ej. "configModel")
+         * @returns {string} El índice final de la ruta
+         */
+        getIndexFromEvent: function (oEvent, sModelName) {
+            const oContext = oEvent.getSource().getBindingContext(sModelName);
+            return oContext ? oContext.getPath().split("/").pop() : null;
+        },
+
+        /**
+         * Obtiene el valor de una propiedad específica del elemento pulsado
+         * @param {sap.ui.base.Event} oEvent - El evento del clic
+         * @param {string} sProperty - El nombre del campo en el JSON (ej. "title")
+         * @param {string} [sModelName] - El nombre del modelo (opcional)
+         * @returns {any} El valor de esa propiedad
+         */
+        getPropertyFromEvent: function (oEvent, sProperty, sModelName) {
+            const oContext = oEvent.getSource().getBindingContext(sModelName);
+            return oContext ? oContext.getProperty(sProperty) : null;
+        },
+
+        // --- Atajo para obtener textos de traducción (i18n) ---
         getResourceBundle: function () {
             return this.getOwnerComponent().getModel("i18n").getResourceBundle();
         },
 
-        // --- 4. Función GLOBAL para el botón "Volver" ---
-        onNavBack: function (sFallbackRoute) {
-            const oHistory = History.getInstance();
-            const sPreviousHash = oHistory.getPreviousHash();
-
-            if (sPreviousHash !== undefined) {
-                window.history.go(-1);
-            } else {
-                this.getRouter().navTo(sFallbackRoute, {}, true);
-            }
-        }, 
         // --- NUEVA FUNCIÓN GENÉRICA PARA NAVEGAR ---
         /**
          * Navega a una ruta específica.
@@ -42,7 +54,7 @@ sap.ui.define([
          */
         navTo: function (sName, oParameters, bReplace) {
             this.getRouter().navTo(sName, oParameters, bReplace);
-        },
+        }
 
     });
 });

@@ -1,8 +1,9 @@
 /* --- Contenedor de la carta --- */
 .sapFCard.cardStyle {
     border: none !important;
-    border-radius: 0px !important;
+    border-radius: 12px !important;
     box-shadow: none !important; /* Quitamos la sombra para hacerla plana */
+    overflow: hidden !important;
     background-color: transparent;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -12,6 +13,7 @@
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
     background-color: #fff;
+    border-radius: 12px !important;
 }
 
 /* --- Etiqueta 'Nuevo' --- */
@@ -53,8 +55,8 @@
 
 .productPrice {
     font-weight: bold !important;
-    font-size: 2rem !important;
-    color: #13099c !important;
+    font-size: 1.5rem !important;
+    color: #000000 !important;
 }
 
 .pointsLink {
@@ -73,10 +75,10 @@
     background-color: #acacac !important; /* Gris muy oscuro */
     color: rgb(255, 255, 255) !important;
     border: none !important;
-    border-radius: 2px !important; /* Bordes casi cuadrados */
+    border-radius: 10px !important; /* Bordes casi cuadrados */
     text-shadow: none !important;
     background-image: none !important;
-    height: 1.5rem !important; /* Un poco más alto */
+    height: 1.5rem !important; 
 }
 
 .btnAddStyle .sapMBtnInner:hover {

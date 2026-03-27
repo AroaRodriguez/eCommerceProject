@@ -1,22 +1,31 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller", 
-    "ecommerceproject/controller/BaseController"
-], function (Controller, BaseController) {
+    "ecommerceproject/controller/BaseController", 
+    "sap/m/MessageToast"
+], function (Controller, BaseController, MessageToast) {
     "use strict";
 
     return BaseController.extend("ecommerceproject.controller.Home", {
         onInit() {
-            this.getRouter().getRoute("RouteDetail").attachPatternMatched(this.onObjectMatched, this);
         }, 
-
+        //Funcion para presionar la carta
         onCardPress: function (oEvent) {
-            // 1. Averiguamos qué producto se ha pulsado
-            const oBindingContext = oEvent.getSource().getBindingContext("configModel");
-            const sItemIndex = oBindingContext.getPath().split("/").pop();
+            //Usamos función generica base controller para sacar el número de la carta.
+           const sItemIndex = this.getIndexFromEvent(oEvent, "configModel");
 
-            // 2. Usamos nuestra función del BaseController para viajar
+            //Usamos nuestra función del BaseController para viajar a la siguiente pantalla
             this.navTo("RouteDetail", {
                 productIndex: sItemIndex
+            });
+        }, 
+
+        onAddToCardPress: function(oEvent) {
+            //Llamamos la función generica para sacar el nombre del producto de la clase basecontroller
+            const sProductName = this.getPropertyFromEvent(oEvent, "title", "configModel");
+            const sFinalMessage = this.getResourceBundle().getText("AddCart", [sProductName]);
+
+            MessageToast.show(sFinalMessage, {
+                duration: 3000
             });
         }
     });
