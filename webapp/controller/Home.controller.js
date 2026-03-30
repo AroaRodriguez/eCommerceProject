@@ -22,8 +22,9 @@ sap.ui.define([
         onAddToCardPress: function(oEvent) {
             //Llamamos la función generica para sacar el nombre del producto de la clase basecontroller
             const sProductName = this.getPropertyFromEvent(oEvent, "title", "configModel");
+            //Llamamos a la función generica para el properties
             const sFinalMessage = this.getResourceBundle().getText("AddCart", [sProductName]);
-
+            //Introducimos el mensaje de properties y la duración del mensaje. 
             MessageToast.show(sFinalMessage, {
                 duration: 3000
             });
