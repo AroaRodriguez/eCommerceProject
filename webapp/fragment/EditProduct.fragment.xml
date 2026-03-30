@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog id="editDialog" title="{i18n>edit}" contentWidth="400px">
+        <content>
+            <VBox id="BoxEdit1" class="sapUiSmallMargin">
+                <Label id="LblEdit1" text="{i18n>nameProduct}" required="true"/>
+                <Input id="InptEdit1" value="{editModel>/title}" />
+
+                <Label id="LblEdit2" text="{i18n>descriptionProduct}" class="sapUiSmallMarginTop"/>
+                <TextArea id="TxtEdit1" value="{editModel>/description}" rows="3" width="100%"/>
+
+                <Label id="LblEdit3" text="{i18n>priceProduct}" required="true" class="sapUiSmallMarginTop"/>
+                <Input id="InptEdit2" value="{editModel>/price}" type="Number" />
+            </VBox>
+        </content>
+        <buttons>
+            <Button id="BtnSave" text="{i18n>saveBtn}" type="Emphasized" press=".onSaveEdit" />
+            <Button id="BtnCancel" text="{i18n>cancelBtn}" type="Transparent" press=".onCloseEdit" />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>
