@@ -69,8 +69,6 @@
 .btnAddStyle {
     width: 100% !important;
 }
-
-/* ATENCIÓN: En SAPUI5 hay que apuntar a inner para forzar el fondo */
 .btnAddStyle .sapMBtnInner {
     background-color: #acacac !important; /* Gris muy oscuro */
     color: rgb(255, 255, 255) !important;
@@ -82,5 +80,54 @@
 }
 
 .btnAddStyle .sapMBtnInner:hover {
+    background-color: #222222 !important; /* Más negro al pasar el ratón */
+}
+
+/* Detail style*/
+
+
+/* Detail imagenes*/
+.productImgDetailStyle {
+    height: 400px !important; /* Fijamos una altura exacta para todos los productos */
+    max-height: 400px !important;
+    width: 100% !important;
+    object-fit: contain !important; /* La imagen se adapta sin deformarse jamás */
+    background-color: #ffffff; /* Fondo blanco puro */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); /* Sombra súper sutil de "estudio" */
+}
+
+/* Detail textos*/
+
+.productDescriptionDetailStyle {
+    font-size: 1.1rem !important;
+    color: #555555 !important;
+    line-height: 1.6 !important; /* Mejor legibilidad */
+}
+.productPriceDetailStyle {
+    font-size: 2rem !important;
+    font-weight: 800 !important; /* Muy negrita */
+    color: #111111 !important;
+}
+.infoTextDetail {
+    font-size: 0.85rem !important;
+    color: #888888 !important;
+}
+
+/* Detail botón añadir al carrito*/
+.btnAddStyleDetail {
+    margin-top: 1rem;
+}
+.btnAddStyleDetail .sapMBtnInner {
+   background-color: #acacac !important; /* Gris muy oscuro */
+    color: rgb(255, 255, 255) !important;
+    border: none !important;
+    border-radius: 10px !important; /* Bordes casi cuadrados */
+    text-shadow: none !important;
+    background-image: none !important;
+    height: 1.5rem !important; 
+}
+.btnAddStyleDetail .sapMBtnInner:hover {
     background-color: #222222 !important; /* Más negro al pasar el ratón */
 }
