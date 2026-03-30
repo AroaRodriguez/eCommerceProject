@@ -1,0 +1,45 @@
+<mvc:View
+    controllerName="ecommerceproject.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout">
+
+    <Page
+        id="detailPage"
+        title="{configModel>title}"
+        backgroundDesign="Solid">
+
+        <content>
+            <layout:Grid id="_IDGenGrid" containerQuery="true" defaultSpan="XL6 L6 M6 S12" class="sapUiMediumMarginTop">
+                
+                <VBox id="detailBox1" alignItems="Center" justifyContent="Center" class="sapUiMediumMargin">
+                    <Image id="detailImg" src="{configModel>imageSrc}" 
+                           width="100%" 
+                           class="productImgDetailStyle"/>
+                </VBox>
+
+                <VBox id="detailBox2" class="sapUiMediumMargin">
+                    
+                    <Title id="detailTitle1" text="{configModel>title}" titleStyle="H1" class="sapUiSmallMarginBottom"/>
+                    
+                    <HBox id="detailBox3" alignItems="Center" class="sapUiSmallMarginBottom">
+                        <RatingIndicator id="detailRating" value="4.6" maxValue="5" editable="false" class="customRating" />
+                        <Text id="detailText1" text="4.6 (128 valoraciones)" class="sapUiTinyMarginBegin ratingText" />
+                    </HBox>
+
+                    <Text id="detailText2" text="{configModel>description}" class="sapUiMediumMarginBottom productDescriptionDetailStyle"/>
+                    
+                    <Title id="detailTitle2" text="{configModel>price} €" titleStyle="H2" class="sapUiSmallMarginBottom productPriceDetailStyle"/>
+                    
+                    <Text id="detailText3" text="{i18n>detailText3}" class="sapUiMediumMarginBottom infoTextDetail"/>
+
+                    <Button id="addToCartBtnDetail"
+                            text="{i18n>add}"
+                            class="btnAddStyleDetail"
+                            width="10%"/>
+                </VBox>
+
+            </layout:Grid>
+        </content>
+    </Page>
+</mvc:View>

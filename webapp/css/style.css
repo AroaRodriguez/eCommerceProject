@@ -1,8 +1,9 @@
 /* --- Contenedor de la carta --- */
 .sapFCard.cardStyle {
     border: none !important;
-    border-radius: 0px !important;
+    border-radius: 12px !important;
     box-shadow: none !important; /* Quitamos la sombra para hacerla plana */
+    overflow: hidden !important;
     background-color: transparent;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -12,6 +13,7 @@
     transform: translateY(-3px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
     background-color: #fff;
+    border-radius: 12px !important;
 }
 
 /* --- Etiqueta 'Nuevo' --- */
@@ -53,8 +55,8 @@
 
 .productPrice {
     font-weight: bold !important;
-    font-size: 2rem !important;
-    color: #13099c !important;
+    font-size: 1.5rem !important;
+    color: #000000 !important;
 }
 
 .pointsLink {
@@ -67,18 +69,65 @@
 .btnAddStyle {
     width: 100% !important;
 }
-
-/* ATENCIÓN: En SAPUI5 hay que apuntar a inner para forzar el fondo */
 .btnAddStyle .sapMBtnInner {
     background-color: #acacac !important; /* Gris muy oscuro */
     color: rgb(255, 255, 255) !important;
     border: none !important;
-    border-radius: 2px !important; /* Bordes casi cuadrados */
+    border-radius: 10px !important; /* Bordes casi cuadrados */
     text-shadow: none !important;
     background-image: none !important;
-    height: 1.5rem !important; /* Un poco más alto */
+    height: 1.5rem !important; 
 }
 
 .btnAddStyle .sapMBtnInner:hover {
+    background-color: #222222 !important; /* Más negro al pasar el ratón */
+}
+
+/* Detail style*/
+
+
+/* Detail imagenes*/
+.productImgDetailStyle {
+    height: 400px !important; /* Fijamos una altura exacta para todos los productos */
+    max-height: 400px !important;
+    width: 100% !important;
+    object-fit: contain !important; /* La imagen se adapta sin deformarse jamás */
+    background-color: #ffffff; /* Fondo blanco puro */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); /* Sombra súper sutil de "estudio" */
+}
+
+/* Detail textos*/
+
+.productDescriptionDetailStyle {
+    font-size: 1.1rem !important;
+    color: #555555 !important;
+    line-height: 1.6 !important; /* Mejor legibilidad */
+}
+.productPriceDetailStyle {
+    font-size: 2rem !important;
+    font-weight: 800 !important; /* Muy negrita */
+    color: #111111 !important;
+}
+.infoTextDetail {
+    font-size: 0.85rem !important;
+    color: #888888 !important;
+}
+
+/* Detail botón añadir al carrito*/
+.btnAddStyleDetail {
+    margin-top: 1rem;
+}
+.btnAddStyleDetail .sapMBtnInner {
+   background-color: #acacac !important; /* Gris muy oscuro */
+    color: rgb(255, 255, 255) !important;
+    border: none !important;
+    border-radius: 10px !important; /* Bordes casi cuadrados */
+    text-shadow: none !important;
+    background-image: none !important;
+    height: 1.5rem !important; 
+}
+.btnAddStyleDetail .sapMBtnInner:hover {
     background-color: #222222 !important; /* Más negro al pasar el ratón */
 }
