@@ -54,6 +54,17 @@ sap.ui.define([
          */
         navTo: function (sName, oParameters, bReplace) {
             this.getRouter().navTo(sName, oParameters, bReplace);
+        }, 
+
+        // --- GESTOR DE FRAGMENTOS GENÉRICO ---
+        getDialog: async function (sFragmentName) {
+            this._oDialogs = this._oDialogs || {};
+            if (!this._oDialogs[sFragmentName]) {
+                this._oDialogs[sFragmentName] = await this.loadFragment({
+                    name: sFragmentName
+                });
+            }
+            return this._oDialogs[sFragmentName];
         }
 
     });
