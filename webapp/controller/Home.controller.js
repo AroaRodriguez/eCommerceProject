@@ -28,6 +28,15 @@ sap.ui.define([
             MessageToast.show(sFinalMessage, {
                 duration: 3000
             });
-        }
+            },
+
+        getMessageBox: function (sMessage) {
+            sMessage = sMessage || this.getResourceBundle().getText("Esto es una práctica");
+            MessageBox.show(sMessage, {
+                icon: MessageBox.Icon.INFORMATION,
+                title: "Information",
+            });
+            return sMessage;
+        }     
     });
 });
