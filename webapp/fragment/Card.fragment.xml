@@ -4,8 +4,8 @@
     xmlns:f="sap.f"
 >
     <f:GridContainer id="Container1"
-        containerQuery="true"
-        width="100%"
+        containerQuery="false"
+        width="70%"
         class="sapUiContentPadding sapUiSmallMarginTop"
         items="{
                 path: 'configModel>/Home/cards' 
