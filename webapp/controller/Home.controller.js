@@ -31,7 +31,7 @@ sap.ui.define([
             },
 
         getMessageBox: function (sMessage) {
-            sMessage = sMessage || this.getResourceBundle().getText("Esto es una práctica");
+            sMessage = sMessage || this.getResourceBundle().getText("Esto es una prueba de conflictos");
             MessageBox.show(sMessage, {
                 icon: MessageBox.Icon.INFORMATION,
                 title: "Information",
