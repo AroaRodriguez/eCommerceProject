@@ -65,7 +65,11 @@ sap.ui.define([
                 });
             }
             return this._oDialogs[sFragmentName];
+        },
+        //Añadir MessageToast en Base controller. 
+        getMessageToast: function (sMessage) {
+        sMessage = sMessage || this.getResourceBundle().getText("Bienvenido a mi aplicación");
+          return sap.m.MessageToast.show(sMessage);
         }
-
     });
 });
