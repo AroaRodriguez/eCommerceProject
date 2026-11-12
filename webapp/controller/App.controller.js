@@ -10,8 +10,8 @@ sap.ui.define([
     getMessageBox: function (sMessage) {
       sMessage = sMessage || this.getResourceBundle().getText("Vamos a iniciar nuestra aplicación");
       MessageBox.show(sMessage, {
-          icon: MessageBox.Icon.INFORMATION,
-          title: "Information",
+          icon: MessageBox.Icon.Success,
+          title: "Success",
       });
       return sMessage;  
     },
