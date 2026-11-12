@@ -42,7 +42,7 @@
                     <Button id="addToCartBtnDetail"
                             text="{i18n>add}"
                             class="btnAddStyleDetail"
-                            width="10%"/>
+                            width="40%"/>
                 </VBox>
 
             </layout:Grid>
