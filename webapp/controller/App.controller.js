@@ -16,8 +16,8 @@ sap.ui.define([
       getMessageBox: function (sMessage) {
         sMessage = sMessage || this.getResourceBundle().getText("Vamos a probar un mensaje de exito para identificar conflictos entre ramas");
         MessageBox.show(sMessage, {
-          icon: MessageBox.Icon.SUCCESS,
-          title: "Success",
+          icon: MessageBox.Icon.ERROR,
+          title: "Error",
         });
         return sMessage;
       }
